@@ -79,7 +79,7 @@ app.use(function (err, req, res, next) {
   res.status(500).send('Error Unknown');
 });
 app.use(morgan('dev'));
-const PORT = 1337;
+const PORT = process.env.PORT || 1337;
 
 app.listen(PORT, () => {
   console.log(`App listening in port ${PORT}`);
